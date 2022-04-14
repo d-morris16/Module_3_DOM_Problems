@@ -1,13 +1,22 @@
+//Create an HTML page that has a dropdown list with three items
+//then write a JavaScript function that displays the number items 
+//and displays the item in the list when you select 
+//from the dropdown
+
+
+
+
 function selector() {
-	let text = document.getElementById("sports").value;
-	document.getElementById("youSelect").innerHTML = 
-	"You selected: " + text; 
-}
+	const mySport = document.getElementById("sports");
+	const numOfItems = document.getElementById("sports").length;
+	console.log(numOfItems)
+	const myOption = mySport.options[mySport.selectedIndex].value;
 
-document.getElementById("onclick").onclick = numOfValues;
+	let stringOfOptions = "";
 
-function numOfValues() {
-	let x = document.getElementById("sports").options.length;
-	document.getElementById("numOfItems").innerHTML = 
-	"You have " + x + " options to choose from";
+	for(i = 0; i < mySport.length; i++) {
+		stringOfOptions = stringOfOptions + mySport.options[i].text + ", ";
+	}
+
+	document.getElementById("youSelect").innerHTML = stringOfOptions;
 }
