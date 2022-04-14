@@ -1,20 +1,28 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>DOM-Problem 2</title>
+    <title>DOM-Problem 3</title>
     
   </head>
 
   <body>
-
-    <div class="linkProblem">
-      <a id="link" href="https://www.w3schools.com">Click the button below to use this link</a>
-
-      <p id="theLink"></p>
-
-      <button id="button1" type="button">Click Me!</button>
+    <h3>Click the button to display the drop down menu and more</h3>
+    <div>
+      <select id="sports" onchange="selector()">
+        <option value="Basketball">Basketball</option>
+        <option value="Football">Football</option>
+        <option value="Soccer">Soccer</option>
+      </select>
     </div>
 
-    <script src="dom-problem-2.js"></script>
+    <div>
+      <button id="onclick" type="button">Click Me!</button>
+      <p id="youSelect"></p>
+      <p id="numOfItems"></p>
+
+    </div>
+   
+
+    <script src="dom-problem-3.js"></script>
   </body>
 </html>
